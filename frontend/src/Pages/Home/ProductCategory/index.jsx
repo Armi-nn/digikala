@@ -32,18 +32,22 @@ export default function ProductCategory({ nameProps }) {
               display: "flex",
             }}
           >
-            <img
-              className={`  ${index === 1 && "border-r "} p-2 pb-3 w-52 h-40  ${
-                index === 3 && "border-r border-t"
-              } ${index === 2 && "border-t "}`}
-              style={{
-                // width: "100px",
-                objectFit: "cover",
-              }}
-              key={image.id}
-              src={process.env.REACT_APP_BASE_URL + image.attributes.url}
-              alt={product.attributes.name}
-            />
+            <Link>
+              <img
+                className={`  ${
+                  index === 1 && "border-r "
+                } p-2 pb-3 w-52 h-40  ${index === 3 && "border-r border-t"} ${
+                  index === 2 && "border-t "
+                }`}
+                style={{
+                  // width: "100px",
+                  objectFit: "cover",
+                }}
+                key={image.id}
+                src={process.env.REACT_APP_BASE_URL + image.attributes.url}
+                alt={product.attributes.name}
+              />
+            </Link>
           </Box>
         ))
       );
@@ -61,9 +65,9 @@ export default function ProductCategory({ nameProps }) {
           <Box className="flex justify-center text-textButton">
             <Box className="flex items-center text-navTextSize pb-3">
               <p>مشاهده</p>
-              <ArrowBackIosIcon 
+              <ArrowBackIosIcon
                 sx={{
-                  fontSize: "10px", 
+                  fontSize: "10px",
                   marginTop: "2px",
                 }}
               />

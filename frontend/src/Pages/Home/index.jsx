@@ -21,6 +21,7 @@ import div2image4 from "../../assets/92b8254442369d3528cdcd21d421f07c.png";
 import shoes from "../../assets/shoes1.png";
 import shoes2 from "../../assets/shoes2.png";
 import imageSpice from "../../assets/46446d7aa0232ae3cfd8f7f07c4a7a7e.png";
+import iamgeDigi from "../../assets/Screenshotdigi.png";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import ProductSlider from "./ProductSlider";
 import Category from "./Category";
@@ -132,8 +133,16 @@ export default function Home() {
       <Category />
 
       <Box className="flex justify-center gap-4 mt-28">
-        <img className="w-99.1 cursor-pointer rounded-2xl" src={shoes} alt="#" />
-        <img className="w-99.1 cursor-pointer rounded-2xl" src={shoes2} alt="#" />
+        <img
+          className="w-99.1 cursor-pointer rounded-2xl"
+          src={shoes}
+          alt="#"
+        />
+        <img
+          className="w-99.1 cursor-pointer rounded-2xl"
+          src={shoes2}
+          alt="#"
+        />
       </Box>
 
       <Box className="mt-4">
@@ -146,17 +155,24 @@ export default function Home() {
           src="https://dkstatics-public.digikala.com/digikala-adservice-banners/6fc8e2d21aba219e1aa2cc93cb4a5fd66a16caac_1726292708.gif?x-oss-process=image"
           alt="#"
         />
-        <img className="w-99.1 cursor-pointer rounded-2xl" src={imageSpice} alt="#" />
+        <img
+          className="w-99.1 cursor-pointer rounded-2xl"
+          src={imageSpice}
+          alt="#"
+        />
       </Box>
 
-<Box className="flex justify-center">
-      <Box className="flex border rounded-2xl mt-4 w-99.6 rtl">
-      <ProductCategory nameProps={"کیف و کاور گوشی"}/>
-      <ProductCategory nameProps={"گوشی موبایل"}/>
-      <ProductCategory nameProps={"هدفون، هدست و هندزفری"}/>
-      <ProductCategory borderRight={true } nameProps={"ساعت هوشمند"}/>
+      <Box className="flex justify-center">
+        <Box className="flex border rounded-2xl mt-4 w-99.6 rtl">
+          <ProductCategory nameProps={"کیف و کاور گوشی"} />
+          <ProductCategory nameProps={"گوشی موبایل"} />
+          <ProductCategory nameProps={"هدفون، هدست و هندزفری"} />
+          <ProductCategory borderRight={true} nameProps={"ساعت هوشمند"} />
+        </Box>
       </Box>
-</Box>
+      <Box className=" flex justify-center mt-5">
+        <img className="w-99.7 px-1.5" src={iamgeDigi} alt="" />
+      </Box>
     </>
   );
 }
