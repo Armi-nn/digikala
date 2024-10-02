@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slider_stories",
+  "info": {
+    "singularName": "slider-story",
+    "pluralName": "slider-stories",
+    "displayName": "SliderStory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slider_banners",
+  "info": {
+    "singularName": "slider-banner",
+    "pluralName": "slider-banners",
+    "displayName": "SliderBanner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
