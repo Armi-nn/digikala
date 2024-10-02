@@ -1,0 +1,55 @@
+*{
+  box-sizing: border-box;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  margin-bottom: 1000px;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('../public/fonts/BYekan+.ttf') format('woff2'),
+       url('../public/fonts/BYekan+\ Bold.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('../public/fonts/BYekan+.ttf') format('woff2'),
+       url('../public/fonts/BYekan+\ Bold.ttf') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@layer base{
+  p ,li{
+    @apply font-iranyekan 
+  }
+  .rtl{
+    direction: rtl;
+  }
+  .custom-prev {
+    @apply w-10
+  }
+  
+  .custom-next {
+    @apply h-25
+  }
+}
+
+:root {
+  --red: #F0F0F1;
+  --inpBorderL: #E0E0E2;
+  --TextColor: #3F4064;
+  --navTextColor: #62666D;
+  --sliderStoryTextColor: #23254E;
+  --discountTextColor: #C0C2C5;
+  --textPrice: #3F4064;
+  --textButton: #19BFD3;
+}
+
+
