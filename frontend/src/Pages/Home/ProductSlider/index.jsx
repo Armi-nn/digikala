@@ -52,7 +52,9 @@ export default function ProductSlider() {
             <Box className="px-2 text-navTextSize">
               <Box className=" text-navTextColor">
                 <p style={{ marginTop: "-4px" }}>
-                  {e?.attributes?.name.slice(0, 38) + "..."}
+                  {e?.attributes?.name.length > 63
+                    ? e?.attributes?.name.slice(0, 38) + "..."
+                    : e?.attributes?.name}
                 </p>
               </Box>
               <Box className="flex gap-4 mt-2 ">

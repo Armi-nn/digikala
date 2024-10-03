@@ -27,6 +27,7 @@ import ProductSlider from "./ProductSlider";
 import Category from "./Category";
 import BrandSlider from "./BrandSlider";
 import ProductCategory from "./ProductCategory";
+import PopularProductSlider from "./PopularProductSlider";
 export default function Home() {
   return (
     <>
@@ -170,8 +171,13 @@ export default function Home() {
           <ProductCategory borderRight={true} nameProps={"ساعت هوشمند"} />
         </Box>
       </Box>
+
       <Box className=" flex justify-center mt-5">
         <img className="w-99.7 px-1.5" src={iamgeDigi} alt="" />
+      </Box>
+
+      <Box>
+        <PopularProductSlider title={"پرفروش‌ترین کالاها"} url={"popular-products?populate=*"}/>
       </Box>
     </>
   );

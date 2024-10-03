@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "popular_products",
+  "info": {
+    "singularName": "popular-product",
+    "pluralName": "popular-products",
+    "displayName": "PopularProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
