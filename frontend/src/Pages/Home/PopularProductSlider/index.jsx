@@ -37,13 +37,13 @@ export default function PopularProductSlider({url,title}) {
   const groupedProducts = groupProducts(product, 3);
 
   const slides = groupedProducts.map((group, index) => (
-    <SwiperSlide key={index}>
+    <SwiperSlide className="mt-32" key={index}>
       <Box className="flex flex-col items-center gap-4">
         {group.map((e, idx) => (
-          <Box className="flex gap-5 w-96 text-navTextSize">
+          <Box className="flex gap-5 w-95 text-navTextSize text-navTextColor">
             <img
               key={idx}
-              className="border-l h-32 bg-white p-2 cursor-pointer object-contain"
+              className=" h-32 bg-white p-2 cursor-pointer object-contain"
               src={
                   process.env.REACT_APP_BASE_URL +
                   e?.attributes?.image?.data[0]?.attributes?.url
