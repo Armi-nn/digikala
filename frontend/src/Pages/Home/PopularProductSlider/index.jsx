@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import WhatshotIcon from '@mui/icons-material/Whatshot';
+import WhatshotIcon from "@mui/icons-material/Whatshot";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -9,15 +9,13 @@ import { Box } from "@mui/material";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-export default function PopularProductSlider({url,title}) {
+export default function PopularProductSlider({ url, title }) {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch(
-          process.env.REACT_APP_BASE_API + url
-        );
+        const res = await fetch(process.env.REACT_APP_BASE_API + url);
         const data = await res.json();
         setProduct(data?.data);
       } catch (err) {
@@ -38,22 +36,24 @@ export default function PopularProductSlider({url,title}) {
 
   const slides = groupedProducts.map((group, index) => (
     <SwiperSlide className="mt-32" key={index}>
-      <Box className="flex flex-col items-center gap-4">
+      <Box className="flex flex-col items-center">
         {group.map((e, idx) => (
-          <Box className="flex gap-5 w-95 text-navTextSize text-navTextColor">
+          <Box className="flex items-center gap-2 w-95  text-navTextColor">
             <img
               key={idx}
               className=" h-32 bg-white p-2 cursor-pointer object-contain"
               src={
-                  process.env.REACT_APP_BASE_URL +
-                  e?.attributes?.image?.data[0]?.attributes?.url
-                }
-                alt="#"
-                />
-                <p>{e?.id}</p>
-                <p>{e?.attributes?.name.length>63 ?e?.attributes?.name.slice(0,63)+"...": e?.attributes?.name}  </p>
-
-                
+                process.env.REACT_APP_BASE_URL +
+                e?.attributes?.image?.data[0]?.attributes?.url
+              }
+              alt="#"
+            />
+            <p className="text-textButton font-bold text-xl">{e?.id}</p>
+            <p className="border-b py-10 text-navTextSize   ">
+              {e?.attributes?.name.length > 59
+                ? e?.attributes?.name.slice(0, 59) + "..."
+                : e?.attributes?.name}{" "}
+            </p>
           </Box>
         ))}
       </Box>
@@ -62,12 +62,10 @@ export default function PopularProductSlider({url,title}) {
 
   return (
     <>
-      <Box className="relative w-full">
+      <Box className="relative w-full ">
         <Box className="flex justify-center">
           <Box className="absolute mt-8 text-xl flex items-center gap-1">
-            <p>
-                {title}
-            </p>
+            <p>{title}</p>
             <WhatshotIcon
               sx={{
                 fontSize: "20px",
@@ -85,7 +83,7 @@ export default function PopularProductSlider({url,title}) {
           </Box>
         </Box>
         <Swiper
-          slidesPerView={3}
+          slidesPerView={4}
           spaceBetween={30}
           freeMode={true}
           navigation={{
