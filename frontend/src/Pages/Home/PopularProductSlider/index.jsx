@@ -69,7 +69,7 @@ export default function PopularProductSlider({ url, title }) {
     <>
       <Box className="relative w-full ">
         <Box className="flex justify-center">
-          <Box className="absolute mt-16 text-xl flex items-center gap-1">
+          <Box className="absolute pt-9 text-xl flex items-center gap-1">
             <p className="text-center" style={{ fontSize: "24px" }}>
               {title}
             </p>
@@ -81,7 +81,7 @@ export default function PopularProductSlider({ url, title }) {
             />
           </Box>
         </Box>
-        <Box className="absolute flex w-full justify-end px-24.5 gap-99.5 mt-85 ">
+        <Box className="absolute flex w-full justify-end px-24.5 gap-99.5 mt-71  ">
           <Box className="bg-white z-10 cursor-pointer nextPopularProduct flex justify-center border w-10 rounded-full h-10">
             <KeyboardArrowLeftIcon className="mt-1.5 text-slate-400 hover:text-slate-700" />
           </Box>
@@ -98,7 +98,7 @@ export default function PopularProductSlider({ url, title }) {
             prevEl: ".prevPopularProduct",
           }}
           modules={[FreeMode, Navigation]}
-          className="mySwiper rtl border relative rounded-2xl w-99.6 mt-10 "
+          className="mySwiper rtl border relative rounded-2xl w-99.6 mt-3.5 "
         >
           {slides}
         </Swiper>
