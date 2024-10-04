@@ -7,16 +7,10 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
 import { FreeMode, Navigation } from "swiper/modules";
 import { Box } from "@mui/material";
 
 export default function Home() {
-  // useEffect(() => {
-  //   const swiperInstance = document.querySelector(".mySwiper").swiper;
-  //   swiperInstance.navigation.init();
-  //   swiperInstance.navigation.update();
-  // }, []);
   const [slideStory, setSlideStory] = useState();
   useEffect(() => {
     (async () => {
@@ -84,7 +78,6 @@ export default function Home() {
         className="mySwiper rtl"
       >
         {item}
-        
       </Swiper>
     </>
   );

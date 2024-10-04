@@ -7,19 +7,19 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Box } from "@mui/material";
-import "./style.css"
+import "./style.css";
 export default function BannerSlider() {
   const [slideBanner, setSlideBanner] = useState();
   useEffect(() => {
     (async () => {
-      try{
+      try {
         const res = await fetch(
           process.env.REACT_APP_BASE_API + "slider-banners?populate=*"
         );
         const data = await res.json();
         setSlideBanner(data?.data);
-      }catch(err){
-        console.log(err)
+      } catch (err) {
+        console.log(err);
       }
     })();
   }, []);
@@ -62,7 +62,6 @@ export default function BannerSlider() {
           nextEl: ".nextBanner",
           prevEl: ".prevBanner",
         }}
-        // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper rtl"
       >

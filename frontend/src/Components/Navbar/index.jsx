@@ -1,6 +1,3 @@
-
-// // // m1 pro 16 512
-
 import React, { useEffect, useRef, useState } from "react";
 import Banner from "./Banner";
 import { Box } from "@mui/material";
@@ -61,7 +58,9 @@ export default function Navbar() {
       <Box
         ref={navbarRef}
         sx={{ zIndex: 9999 }}
-        className={`fixed w-full top-0 ${isScrollingDown && "shadow-slate-300 shadow-bottom"}`}
+        className={`fixed w-full top-0 ${
+          isScrollingDown && "shadow-slate-300 shadow-bottom"
+        }`}
       >
         <Banner />
         <Box className="bg-white h-23 pt-3">
@@ -138,11 +137,17 @@ export default function Navbar() {
             </li>
             <li className="flex gap-1.5 cursor-pointer">
               کارت هدیه
-              <CardGiftcardOutlinedIcon sx={{ fontSize: "18px" }} className="mt-1" />
+              <CardGiftcardOutlinedIcon
+                sx={{ fontSize: "18px" }}
+                className="mt-1"
+              />
             </li>
             <li className="flex gap-1.5 cursor-pointer">
               سوپر مارکت
-              <ShoppingBasketOutlinedIcon sx={{ fontSize: "18px" }} className="mt-1" />
+              <ShoppingBasketOutlinedIcon
+                sx={{ fontSize: "18px" }}
+                className="mt-1"
+              />
             </li>
             <li className="flex gap-1 cursor-pointer">
               <p className="">شگفت انگیزها</p>

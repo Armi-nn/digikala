@@ -182,4 +182,3 @@ export default function Home() {
     </>
   );
 }
-// ساندرو
