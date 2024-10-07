@@ -32,11 +32,13 @@ export default function Home() {
   return (
     <>
       <Box>
-        <Box
-          sx={{ marginLeft: "1430px", marginTop: "490px" }}
-          className="fixed z-50 text-white bg-red-500 cursor-pointer p-3 rounded-full "
-        >
-          <HeadsetMicIcon className="" />
+        <Box className="flex justify-end items-start pr-10">
+          <Box
+            sx={{ marginTop: "490px" }}
+            className="fixed z-50 text-white bg-red-500 cursor-pointer p-3 rounded-full "
+          >
+            <HeadsetMicIcon className="" />
+          </Box>
         </Box>
         <Box
           sx={{ marginTop: "485px", marginLeft: "15px" }}
@@ -177,7 +179,10 @@ export default function Home() {
       </Box>
 
       <Box>
-        <PopularProductSlider title={"پرفروش‌ترین کالاها"} url={"popular-products?populate=*"}/>
+        <PopularProductSlider
+          title={"پرفروش‌ترین کالاها"}
+          url={"popular-products?populate=*"}
+        />
       </Box>
     </>
   );
