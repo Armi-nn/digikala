@@ -19,7 +19,6 @@ export default function ProductCategory({ nameProps }) {
       }
     })();
   }, []);
-  let card = 0;
   const item = product?.map((e) => {
     const name = e?.attributes?.name;
     if (name === nameProps) {

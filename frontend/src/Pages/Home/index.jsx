@@ -170,7 +170,7 @@ export default function Home() {
           <ProductCategory nameProps={"کیف و کاور گوشی"} />
           <ProductCategory nameProps={"گوشی موبایل"} />
           <ProductCategory nameProps={"هدفون، هدست و هندزفری"} />
-          <ProductCategory borderRight={true} nameProps={"ساعت هوشمند"} />
+          <ProductCategory nameProps={"ساعت هوشمند"} />
         </Box>
       </Box>
 
@@ -183,6 +183,15 @@ export default function Home() {
           title={"پرفروش‌ترین کالاها"}
           url={"popular-products?populate=*"}
         />
+      </Box>
+
+      <Box className="flex justify-center">
+        <Box className="flex border rounded-2xl mt-4 w-99.6 rtl">
+          <ProductCategory nameProps={"لپ تاپ و الترابوک"} />
+          <ProductCategory nameProps={"سایر لوازم خودرو"} />
+          <ProductCategory nameProps={"ساعت عقربه ای مردانه"} />
+          <ProductCategory nameProps={"کفش ورزشی زنانه و مردانه"} />
+        </Box>
       </Box>
     </>
   );
