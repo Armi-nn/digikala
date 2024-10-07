@@ -8,6 +8,7 @@ import { FreeMode, Navigation } from "swiper/modules";
 import { Box } from "@mui/material";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { Link } from "react-router-dom";
 
 export default function PopularProductSlider({ url, title }) {
   const [product, setProduct] = useState([]);
@@ -35,34 +36,36 @@ export default function PopularProductSlider({ url, title }) {
   const groupedProducts = groupProducts(product, 3);
 
   const slides = groupedProducts.map((group, index) => (
-    <SwiperSlide className="mt-4.5" key={index}>
-      <Box className="flex flex-col mt-16 px-20 justify-center items-center">
-        {group.map((e, idx) => (
-          <Box className="flex items-center gap-2 w-80 text-navTextColor">
-            <img
-              key={idx}
-              className=" h-24 bg-white p-2 cursor-pointer "
-              src={
-                process.env.REACT_APP_BASE_URL +
-                e?.attributes?.image?.data[0]?.attributes?.url
-              }
-              alt="#"
-            />
-            <p className="text-textButton font-bold text-xl">{e?.id}</p>
+    <Link>
+      <SwiperSlide className="mt-4.5" key={index}>
+        <Box className="flex flex-col mt-16 px-20 justify-center items-center">
+          {group.map((e, idx) => (
+            <Box className="flex items-center gap-2 w-80 text-navTextColor">
+              <img
+                key={idx}
+                className=" h-24 bg-white p-2 cursor-pointer "
+                src={
+                  process.env.REACT_APP_BASE_URL +
+                  e?.attributes?.image?.data[0]?.attributes?.url
+                }
+                alt="#"
+              />
+              <p className="text-textButton font-bold text-xl">{e?.id}</p>
 
-            <p
-              className={`${
-                idx === 2 ? "" : "border-b"
-              }  py-10 text-navTextSize h-25 `}
-            >
-              {e?.attributes?.name.length > 50
-                ? e?.attributes?.name.slice(0, 50) + "..."
-                : e?.attributes?.name}{" "}
-            </p>
-          </Box>
-        ))}
-      </Box>
-    </SwiperSlide>
+              <p
+                className={`${
+                  idx === 2 ? "" : "border-b"
+                }  py-10 text-navTextSize h-25 `}
+              >
+                {e?.attributes?.name.length > 50
+                  ? e?.attributes?.name.slice(0, 50) + "..."
+                  : e?.attributes?.name}{" "}
+              </p>
+            </Box>
+          ))}
+        </Box>
+      </SwiperSlide>
+    </Link>
   ));
 
   return (
