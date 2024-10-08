@@ -28,6 +28,9 @@ import Category from "./Category";
 import BrandSlider from "./BrandSlider";
 import ProductCategory from "./ProductCategory";
 import PopularProductSlider from "./PopularProductSlider";
+import imageCosmeticCream from "../../assets/ScreenshotcosmeticCream.png";
+import DiscountedProducts from "./DiscountedProducts";
+
 export default function Home() {
   return (
     <>
@@ -193,7 +196,18 @@ export default function Home() {
           <ProductCategory nameProps={"کفش ورزشی زنانه و مردانه"} />
         </Box>
       </Box>
+
+      <Box className="px-22.5 mt-3">
+        <img className="cursor-pointer " src={imageCosmeticCream} alt="#" />
+      </Box>
+
+      <Box>
+        <Box className="flex justify-center">
+          <Box className="flex border rounded-2xl mt-4 w-99.6 rtl">
+            <DiscountedProducts />
+          </Box>
+        </Box>
+      </Box>
     </>
   );
 }
-
