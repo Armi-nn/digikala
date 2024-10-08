@@ -860,6 +860,41 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiDiscountedProductDiscountedProduct
+  extends Schema.CollectionType {
+  collectionName: 'discounted_products';
+  info: {
+    singularName: 'discounted-product';
+    pluralName: 'discounted-products';
+    displayName: 'discountedProduct';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    price: Attribute.String;
+    discount: Attribute.String;
+    discountedPrice: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::discounted-product.discounted-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::discounted-product.discounted-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPopularProductPopularProduct extends Schema.CollectionType {
   collectionName: 'popular_products';
   info: {
@@ -1060,6 +1095,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::brand.brand': ApiBrandBrand;
       'api::category.category': ApiCategoryCategory;
+      'api::discounted-product.discounted-product': ApiDiscountedProductDiscountedProduct;
       'api::popular-product.popular-product': ApiPopularProductPopularProduct;
       'api::product.product': ApiProductProduct;
       'api::slider-banner.slider-banner': ApiSliderBannerSliderBanner;

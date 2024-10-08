@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discounted_products",
+  "info": {
+    "singularName": "discounted-product",
+    "pluralName": "discounted-products",
+    "displayName": "discountedProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "string"
+    },
+    "discountedPrice": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
