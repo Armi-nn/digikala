@@ -34,20 +34,6 @@ export default function DiscountedProducts() {
               alt="#"
             />
           </Box>
-          {/* <Box className="flex items-center juss">
-            {e?.attributes?.discount&&
-            <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-2">
-              <p
-              >
-                {e?.attributes?.discount}
-              </p>
-            </Box>
-          }
-            <Box className="flex">
-              <p>{e?.attributes?.discountedPrice}</p>
-              <p>تومان</p>
-            </Box>
-          </Box> */}
           <Box className="flex justify-between px-2 py-4 ">
             <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-1">
               <p>{e?.attributes?.discount}</p>
