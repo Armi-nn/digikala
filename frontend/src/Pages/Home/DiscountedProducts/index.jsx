@@ -22,15 +22,18 @@ export default function DiscountedProducts() {
         <Box
           className={`${
             index === 5 || index === 11 || index === 17 ? "" : "border-l "
-          } ${index >= 12 && index <= 15 ? "" : "border-b"} `}
+          } ${index >= 12 && index <= 15 ? "" : "border-b"}`}
         >
-           <img
-            src={
-              process.env.REACT_APP_BASE_URL +
-              e?.attributes?.image?.data?.attributes?.url
-            }
-            alt="#"
-          />
+          <Box className="flex justify-center">
+            <img
+              className="w-36"
+              src={
+                process.env.REACT_APP_BASE_URL +
+                e?.attributes?.image?.data?.attributes?.url
+              }
+              alt="#"
+            />
+          </Box>
           {/* <Box className="flex items-center juss">
             {e?.attributes?.discount&&
             <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-2">
@@ -45,29 +48,26 @@ export default function DiscountedProducts() {
               <p>تومان</p>
             </Box>
           </Box> */}
-           <Box className="flex justify-between px-5 ">
-                <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-1">
-                  <p
-                  >
-                    {e?.attributes?.discount}
-                  </p>
+          <Box className="flex justify-between px-2 py-4 ">
+            <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-1">
+              <p>{e?.attributes?.discount}</p>
+            </Box>
+            <Box className="">
+              <Box className="flex items-center">
+                <Box className="flex text-lg text-TextColorPrice">
+                  <p>{e?.attributes?.discountedPrice}</p>
                 </Box>
-                <Box className="">
-                  <Box className="flex items-center">
-                    <Box className="flex text-lg text-TextColorPrice">
-                      <p>{e?.attributes?.discountedPrice}</p>
-                    </Box>
-                    <Box className="text-sm ">
-                      <p>تومان</p>
-                    </Box>
-                  </Box>
-                  <Box className="">
-                    <p className=" text-discountTextColor line-through ">
-                      {e?.attributes?.price}
-                    </p>
-                  </Box>
+                <Box className="text-sm ">
+                  <p>تومان</p>
                 </Box>
               </Box>
+              <Box className="">
+                <p className=" text-discountTextColor line-through ">
+                  {e?.attributes?.price}
+                </p>
+              </Box>
+            </Box>
+          </Box>
         </Box>
       </Box>
     );
