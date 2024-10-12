@@ -24,17 +24,28 @@ export default function DiscountedProducts() {
             index === 5 || index === 11 || index === 17 ? "" : "border-l "
           } ${index >= 12 && index <= 15 ? "" : "border-b"} `}
         >
-          <Box>
-            <p>تومان</p>
-            <p></p>
-          </Box>
-          <img
+           <img
             src={
               process.env.REACT_APP_BASE_URL +
               e?.attributes?.image?.data?.attributes?.url
             }
             alt="#"
           />
+          <Box className="flex items-center juss">
+            {e?.attributes?.discount&&
+            <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-2">
+              <p
+              >
+                {e?.attributes?.discount}
+              </p>
+            </Box>
+          }
+            <Box className="flex">
+              <p>{e?.attributes?.discountedPrice}</p>
+              <p>تومان</p>
+            </Box>
+          </Box>
+         
         </Box>
       </Box>
     );
