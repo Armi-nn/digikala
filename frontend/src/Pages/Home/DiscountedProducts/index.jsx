@@ -31,7 +31,7 @@ export default function DiscountedProducts() {
             }
             alt="#"
           />
-          <Box className="flex items-center juss">
+          {/* <Box className="flex items-center juss">
             {e?.attributes?.discount&&
             <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-2">
               <p
@@ -44,8 +44,30 @@ export default function DiscountedProducts() {
               <p>{e?.attributes?.discountedPrice}</p>
               <p>تومان</p>
             </Box>
-          </Box>
-         
+          </Box> */}
+           <Box className="flex justify-between px-5 ">
+                <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-1">
+                  <p
+                  >
+                    {e?.attributes?.discount}
+                  </p>
+                </Box>
+                <Box className="">
+                  <Box className="flex items-center">
+                    <Box className="flex text-lg text-TextColorPrice">
+                      <p>{e?.attributes?.discountedPrice}</p>
+                    </Box>
+                    <Box className="text-sm ">
+                      <p>تومان</p>
+                    </Box>
+                  </Box>
+                  <Box className="">
+                    <p className=" text-discountTextColor line-through ">
+                      {e?.attributes?.price}
+                    </p>
+                  </Box>
+                </Box>
+              </Box>
         </Box>
       </Box>
     );
