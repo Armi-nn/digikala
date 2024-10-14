@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 export default function Readings() {
   const [product, setProduct] = useState();
@@ -38,10 +39,13 @@ export default function Readings() {
     <>
       <Box className="flex flex-col gap-6">
         <Box className="flex justify-between px-28 items-center ">
-          <Box>
-            <p className="text-sm text-textButton">
-              مطالب بیشتر در دیجی‌کالا مگ
-            </p>
+          <Box className="text-textButton flex items-center gap-1">
+            <Box>
+              <ArrowBackIosNewIcon sx={{
+                fontSize: "12px",
+              }}/>
+            </Box>
+            <p className="text-sm ">مطالب بیشتر در دیجی‌کالا مگ</p>
           </Box>
           <p className="text-lg ">خواندنی‌ها</p>
         </Box>

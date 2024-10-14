@@ -218,7 +218,7 @@ export default function Home() {
         />
       </Box>
 
-      <Box className="mt-4">
+      <Box className="mt-7">
       <Readings/>
       </Box>
     </>
