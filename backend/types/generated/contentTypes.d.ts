@@ -1005,6 +1005,38 @@ export interface ApiProductProduct extends Schema.CollectionType {
   };
 }
 
+export interface ApiReadingReading extends Schema.CollectionType {
+  collectionName: 'readings';
+  info: {
+    singularName: 'reading';
+    pluralName: 'readings';
+    displayName: 'Readings';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::reading.reading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::reading.reading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSliderBannerSliderBanner extends Schema.CollectionType {
   collectionName: 'slider_banners';
   info: {
@@ -1132,6 +1164,7 @@ declare module '@strapi/types' {
       'api::popular-product.popular-product': ApiPopularProductPopularProduct;
       'api::popular-product2.popular-product2': ApiPopularProduct2PopularProduct2;
       'api::product.product': ApiProductProduct;
+      'api::reading.reading': ApiReadingReading;
       'api::slider-banner.slider-banner': ApiSliderBannerSliderBanner;
       'api::slider-story.slider-story': ApiSliderStorySliderStory;
       'api::sub-category.sub-category': ApiSubCategorySubCategory;
