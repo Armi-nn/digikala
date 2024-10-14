@@ -31,6 +31,7 @@ import ProductCategory from "./ProductCategory";
 import PopularProductSlider from "./PopularProductSlider";
 import imageCosmeticCream from "../../assets/ScreenshotcosmeticCream.png";
 import DiscountedProducts from "./DiscountedProducts";
+import Readings from "./Readings";
 
 export default function Home() {
   return (
@@ -215,6 +216,10 @@ export default function Home() {
           title={"پرفروش‌ترین کالاها"}
           url={"popular-product2s?populate=*"}
         />
+      </Box>
+
+      <Box className="mt-4">
+      <Readings/>
       </Box>
     </>
   );
