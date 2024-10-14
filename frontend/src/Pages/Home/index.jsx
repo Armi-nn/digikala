@@ -25,6 +25,7 @@ import imageSpice from "../../assets/46446d7aa0232ae3cfd8f7f07c4a7a7e.png";
 import iamgeDigi from "../../assets/Screenshotdigi.png";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import ProductSlider from "./ProductSlider";
+
 import Category from "./Category";
 import BrandSlider from "./BrandSlider";
 import ProductCategory from "./ProductCategory";
