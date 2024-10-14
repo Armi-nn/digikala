@@ -209,6 +209,13 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
+
+      <Box>
+        <PopularProductSlider
+          title={"پرفروش‌ترین کالاها"}
+          url={"popular-product2s?populate=*"}
+        />
+      </Box>
     </>
   );
 }

@@ -927,6 +927,39 @@ export interface ApiPopularProductPopularProduct extends Schema.CollectionType {
   };
 }
 
+export interface ApiPopularProduct2PopularProduct2
+  extends Schema.CollectionType {
+  collectionName: 'popular_product2s';
+  info: {
+    singularName: 'popular-product2';
+    pluralName: 'popular-product2s';
+    displayName: 'PopularProduct2';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::popular-product2.popular-product2',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::popular-product2.popular-product2',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
@@ -1097,6 +1130,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::discounted-product.discounted-product': ApiDiscountedProductDiscountedProduct;
       'api::popular-product.popular-product': ApiPopularProductPopularProduct;
+      'api::popular-product2.popular-product2': ApiPopularProduct2PopularProduct2;
       'api::product.product': ApiProductProduct;
       'api::slider-banner.slider-banner': ApiSliderBannerSliderBanner;
       'api::slider-story.slider-story': ApiSliderStorySliderStory;

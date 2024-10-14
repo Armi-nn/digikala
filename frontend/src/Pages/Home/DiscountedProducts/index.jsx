@@ -25,7 +25,7 @@ export default function DiscountedProducts() {
           <Box
             className={`${
               index === 5 || index === 11 || index === 17 ? "" : "border-l "
-            } ${index >= 12 && index <= 15 ? "" : "border-b"}`}
+            } ${index > 12  ? "" : "border-b"}`}
           >
             <Box className="flex justify-center">
               <img
