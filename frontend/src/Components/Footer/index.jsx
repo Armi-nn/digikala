@@ -11,7 +11,10 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GroupWorkIcon from "@mui/icons-material/GroupWork";
-import digikalaApp from "../../assets/digikalaApp.png"
+import digikalaApp from "../../assets/digikalaApp.png";
+import rezi from "../../assets/rezi.png";
+import kasbokar from "../../assets/kasbokar.png";
+import notfound from "../../assets/notfound.png";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -143,15 +146,60 @@ export default function Footer() {
               </p>
               <Box>
                 <Box className="flex gap-2">
-                <input className="border py-2 px-8 rounded-lg " style={{background:'#F0F0F1'}} type="email" placeholder="ایمیل شما" name="" id="" />
-                <button className="border py-2 px-4 rounded-lg " style={{background:'#F0F0F1'}}>ثبت </button>
+                  <input
+                    className="border py-2 px-8 rounded-lg "
+                    style={{ background: "#F0F0F1" }}
+                    type="email"
+                    placeholder="ایمیل شما"
+                    name=""
+                    id=""
+                  />
+                  <button
+                    className="border py-2 px-4 rounded-lg "
+                    style={{ background: "#F0F0F1" }}
+                  >
+                    ثبت{" "}
+                  </button>
                 </Box>
               </Box>
             </Box>
           </Box>
         </Box>
         <Box className="flex justify-center mt-11">
-          <img style={{width:'97vw'}} src={digikalaApp} alt="#" />
+          <img style={{ width: "97vw" }} src={digikalaApp} alt="#" />
+        </Box>
+        <Box className="border-t border-b mt-5 rtl flex justify-between mx-5 pb-10">
+          <Box className="text-navTextColor text-navTextSize flex flex-col justify-center">
+            <p className="text-2xl ">
+              فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلای
+            </p>
+            <p>
+              یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی
+              متنوع، باکیفیت و دارای قیمت مناسب را در مدت زمان ی کوتاه به دست
+              مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛
+            </p>
+            <p>
+              ویژگی‌هایی که فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار
+              کرده و توانسته از این طریق مشتریان ثابت خود را داشته باشد.
+            </p>
+            <p>
+              یکی از مهم‌ترین دغدغه‌های کاربران دیجی‌کالا یا هر فروشگاه‌
+              اینترنتی دیگری، این است که کالای خریداری شده چه زمانی به دستشان
+              می‌رسد. دیجی‌کالا شیوه‌های مختلفی از ارسال را متناسب با فروشنده
+              کالا،‌ مقصد کالا
+            </p>
+          </Box>
+          <Box className="flex gap-2">
+            <Box className="border rounded-lg p-3.5  flex justify-center mt-5">
+              <img src={rezi} className="w-20 object-contain " alt="#" />
+            </Box>
+            <Box className="border rounded-lg p-3.5  flex justify-center mt-5">
+              <img src={kasbokar} className="w-20 object-contain " alt="#" />
+            </Box>
+            <Box  className="border rounded-lg p-3.5  flex justify-center mt-5">
+              <img src={notfound} className="w-20 object-contain " alt="#" />
+            </Box>
+          </Box>
         </Box>
       </Box>
     </>
