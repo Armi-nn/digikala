@@ -19,7 +19,10 @@ export default function Readings() {
   }, []);
   const items = product?.map((e, index) => {
     return (
-      <Box key={index} className="border rounded-lg overflow-hidden cursor-pointer">
+      <Box
+        key={index}
+        className="border rounded-lg overflow-hidden cursor-pointer"
+      >
         <img
           src={
             process.env.REACT_APP_BASE_URL +
@@ -41,9 +44,11 @@ export default function Readings() {
         <Box className="flex justify-between px-28 items-center ">
           <Box className="text-textButton flex items-center gap-1">
             <Box>
-              <ArrowBackIosNewIcon sx={{
-                fontSize: "12px",
-              }}/>
+              <ArrowBackIosNewIcon
+                sx={{
+                  fontSize: "12px",
+                }}
+              />
             </Box>
             <p className="text-sm ">مطالب بیشتر در دیجی‌کالا مگ</p>
           </Box>

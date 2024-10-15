@@ -206,7 +206,7 @@ export default function Home() {
       <Box>
         <Box className="flex justify-center">
           <Box className="flex border rounded-2xl mt-4 w-99.6 rtl">
-            <DiscountedProducts className=""/>
+            <DiscountedProducts className="" />
           </Box>
         </Box>
       </Box>
@@ -219,9 +219,8 @@ export default function Home() {
       </Box>
 
       <Box className="mt-7">
-      <Readings/>
+        <Readings />
       </Box>
     </>
   );
 }
-
