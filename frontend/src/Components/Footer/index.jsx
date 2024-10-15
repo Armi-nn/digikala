@@ -11,6 +11,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GroupWorkIcon from "@mui/icons-material/GroupWork";
+import digikalaApp from "../../assets/digikalaApp.png"
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -101,22 +102,22 @@ export default function Footer() {
             <Box>
               <ul className="flex flex-col gap-4">
                 <li className="text-lg text-black">با دیجی‌کالا</li>
-                <li>اتاق خبر دیجی‌کالا</li>
-                <li>فروش در دیجی‌کالا</li>
-                <li>فرصت‌های شغلی</li>
-                <li>گزارش تخلف در دیجی‌کالا</li>
-                <li>تماس با دیجی‌کالا</li>
-                <li>درباره دیجی‌کالا</li>
+                <li className="cursor-pointer">اتاق خبر دیجی‌کالا</li>
+                <li className="cursor-pointer">فروش در دیجی‌کالا</li>
+                <li className="cursor-pointer">فرصت‌های شغلی</li>
+                <li className="cursor-pointer">گزارش تخلف در دیجی‌کالا</li>
+                <li className="cursor-pointer">تماس با دیجی‌کالا</li>
+                <li className="cursor-pointer">درباره دیجی‌کالا</li>
               </ul>
             </Box>
             <Box>
               <ul className="flex flex-col gap-4">
                 <li className="text-lg text-black">خدمات مشتریان</li>
-                <li>پاسخ به پرسش‌های متداول</li>
-                <li>رویه‌های بازگرداندن کالا</li>
-                <li>شرایط استفاده</li>
-                <li>حریم خصوصی</li>
-                <li>گزارش باگ</li>
+                <li className="cursor-pointer">پاسخ به پرسش‌های متداول</li>
+                <li className="cursor-pointer">رویه‌های بازگرداندن کالا</li>
+                <li className="cursor-pointer">شرایط استفاده</li>
+                <li className="cursor-pointer">حریم خصوصی</li>
+                <li className="cursor-pointer">گزارش باگ</li>
               </ul>
             </Box>
             <Box>
@@ -124,9 +125,9 @@ export default function Footer() {
                 <li className="text-lg text-black">
                   راهنمای خرید از دیجی‌کالا
                 </li>
-                <li>نحوه ثبت سفارش</li>
-                <li>رویه ارسال سفارش</li>
-                <li>شیوه‌های پرداخت</li>
+                <li className="cursor-pointer">نحوه ثبت سفارش</li>
+                <li className="cursor-pointer">رویه ارسال سفارش</li>
+                <li className="cursor-pointer">شیوه‌های پرداخت</li>
               </ul>
             </Box>
             <Box className="flex flex-col gap-4">
@@ -148,6 +149,9 @@ export default function Footer() {
               </Box>
             </Box>
           </Box>
+        </Box>
+        <Box className="flex justify-center mt-11">
+          <img style={{width:'97vw'}} src={digikalaApp} alt="#" />
         </Box>
       </Box>
     </>
