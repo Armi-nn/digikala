@@ -18,6 +18,7 @@ module.exports = {
         discountTextColor: "var(--discountTextColor)",
         TextColorPrice: "var(--textPrice)",
         textButton: "var(--textButton)",
+        CoolerBtnFooter: "var(--CoolerBtnFooter)",
       },
       fontFamily: {
         iranyekan: ["IRANYekan", "sans-serif"],

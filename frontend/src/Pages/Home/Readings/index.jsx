@@ -19,7 +19,7 @@ export default function Readings() {
   }, []);
   const items = product?.map((e, index) => {
     return (
-      <Box key={index} className="border rounded-lg overflow-hidden">
+      <Box key={index} className="border rounded-lg overflow-hidden cursor-pointer">
         <img
           src={
             process.env.REACT_APP_BASE_URL +

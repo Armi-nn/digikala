@@ -1,55 +1,55 @@
-*{
+* {
   box-sizing: border-box;
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   margin-bottom: 1000px;
 }
 
 @font-face {
-  font-family: 'IRANYekan';
-  src: url('../public/fonts/BYekan+.ttf') format('woff2'),
-       url('../public/fonts/BYekan+\ Bold.ttf') format('woff');
+  font-family: "IRANYekan";
+  src: url("../public/fonts/BYekan+.ttf") format("woff2"),
+    url("../public/fonts/BYekan+\ Bold.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'IRANYekan';
-  src: url('../public/fonts/BYekan+.ttf') format('woff2'),
-       url('../public/fonts/BYekan+\ Bold.ttf') format('woff');
+  font-family: "IRANYekan";
+  src: url("../public/fonts/BYekan+.ttf") format("woff2"),
+    url("../public/fonts/BYekan+\ Bold.ttf") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
-@layer base{
-  p ,li{
-    @apply font-iranyekan 
+@layer base {
+  p,
+  li {
+    @apply font-iranyekan;
   }
-  .rtl{
+  .rtl {
     direction: rtl;
   }
   .custom-prev {
-    @apply w-10
+    @apply w-10;
   }
-  
+
   .custom-next {
-    @apply h-25
+    @apply h-25;
   }
 }
 
 :root {
-  --red: #F0F0F1;
-  --inpBorderL: #E0E0E2;
-  --TextColor: #3F4064;
-  --navTextColor: #62666D;
-  --sliderStoryTextColor: #23254E;
-  --discountTextColor: #C0C2C5;
-  --textPrice: #3F4064;
-  --textButton: #19BFD3;
+  --red: #f0f0f1;
+  --inpBorderL: #e0e0e2;
+  --TextColor: #3f4064;
+  --navTextColor: #62666d;
+  --sliderStoryTextColor: #23254e;
+  --discountTextColor: #c0c2c5;
+  --textPrice: #3f4064;
+  --textButton: #19bfd3;
+  --CoolerBtnFooter: #a1a3a8;
 }
-
-

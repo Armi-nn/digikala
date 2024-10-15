@@ -1,19 +1,17 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Home from './Pages/Home'
-import Navbar from './Components/Navbar'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 export default function App() {
   return (
     <>
-    <Navbar/>
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-    </Routes>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+      <Footer/>
     </>
-  )
+  );
 }
-
-
-// # REACT_APP_BASE_URL=http://localhost:1337
-// # REACT_APP_BASE_API=http://localhost:1337/api/
