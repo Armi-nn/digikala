@@ -15,6 +15,7 @@ import digikalaApp from "../../assets/digikalaApp.png";
 import rezi from "../../assets/rezi.png";
 import kasbokar from "../../assets/kasbokar.png";
 import notfound from "../../assets/notfound.png";
+import digikalaBrand from "../../assets/digikalaBrand.png"
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -200,6 +201,14 @@ export default function Footer() {
               <img src={notfound} className="w-20 object-contain " alt="#" />
             </Box>
           </Box>
+        </Box>
+        <Box className="text-navTextColor text-navTextSize flex justify-center items-center h-22">
+          <p>
+          برای استفاده از مطالب دیجی‌کالا، داشتن «هدف غیرتجاری» و ذکر «منبع» کافیست. تمام حقوق اين وب‌سايت نیز برای شرکت نوآوران فن آوازه (فروشگاه آنلاین دیجی‌کالا) است.
+          </p>
+        </Box>
+        <Box>
+          <img style={{width:'100%',height:'100%'}} src={digikalaBrand} alt="#" />
         </Box>
       </Box>
     </>

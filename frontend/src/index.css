@@ -5,10 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin-bottom: 1000px;
-}
-
 @font-face {
   font-family: "IRANYekan";
   src: url("../public/fonts/BYekan+.ttf") format("woff2"),
