@@ -2,11 +2,11 @@ import { Box } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import React, { useEffect, useState } from "react";
 import Logo from "../../assets/full-horizontal.png";
-import image1 from "../../assets/express-delivery.png"
-import image2 from "../../assets/cash-on-delivery.png"
-import image3 from "../../assets/support.png"
-import image4 from "../../assets/days-return.png"
-import image5 from "../../assets/original-products.png"
+import image1 from "../../assets/express-delivery.png";
+import image2 from "../../assets/cash-on-delivery.png";
+import image3 from "../../assets/support.png";
+import image4 from "../../assets/days-return.png";
+import image5 from "../../assets/original-products.png";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -71,26 +71,26 @@ export default function Footer() {
           </Box>
         </Box>
         <Box className="flex rtl justify-center gap-42 text-navTextSize text-navTextColor mt-12">
-            <Box className="flex flex-col justify-center  items-center cursor-pointer" >
-                <img className="w-14" src={image1} alt="#" />
-                <p>اﻣﮑﺎن ﺗﺤﻮﯾﻞ اﮐﺴﭙﺮس</p>
-            </Box>
-            <Box className="flex flex-col justify-center items-center cursor-pointer">
-                <img className="w-14" src={image2} alt="#" />
-                <p>امکان پرداخت در محل</p>
-            </Box>
-            <Box className="flex flex-col justify-center items-center cursor-pointer">
-                <img className="w-14" src={image3} alt="#" />
-                <p>۷ روز ﻫﻔﺘﻪ، ۲۴ ﺳﺎﻋﺘﻪ</p>
-            </Box>
-            <Box className="flex flex-col justify-center items-center cursor-pointer">
-                <img className="w-14" src={image4} alt="#" />
-                <p>هفت روز ضمانت بازگشت کالا</p>
-            </Box>
-            <Box className="flex flex-col justify-center items-center cursor-pointer">
-                <img className="w-14" src={image5} alt="#" />
-                <p>ﺿﻤﺎﻧﺖ اﺻﻞ ﺑﻮدن ﮐﺎﻟﺎ</p>
-            </Box>
+          <Box className="flex flex-col justify-center  items-center cursor-pointer">
+            <img className="w-14" src={image1} alt="#" />
+            <p>اﻣﮑﺎن ﺗﺤﻮﯾﻞ اﮐﺴﭙﺮس</p>
+          </Box>
+          <Box className="flex flex-col justify-center items-center cursor-pointer">
+            <img className="w-14" src={image2} alt="#" />
+            <p>امکان پرداخت در محل</p>
+          </Box>
+          <Box className="flex flex-col justify-center items-center cursor-pointer">
+            <img className="w-14" src={image3} alt="#" />
+            <p>۷ روز ﻫﻔﺘﻪ، ۲۴ ﺳﺎﻋﺘﻪ</p>
+          </Box>
+          <Box className="flex flex-col justify-center items-center cursor-pointer">
+            <img className="w-14" src={image4} alt="#" />
+            <p>هفت روز ضمانت بازگشت کالا</p>
+          </Box>
+          <Box className="flex flex-col justify-center items-center cursor-pointer">
+            <img className="w-14" src={image5} alt="#" />
+            <p>ﺿﻤﺎﻧﺖ اﺻﻞ ﺑﻮدن ﮐﺎﻟﺎ</p>
+          </Box>
         </Box>
       </Box>
     </>
