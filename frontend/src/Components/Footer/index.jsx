@@ -7,6 +7,10 @@ import image2 from "../../assets/cash-on-delivery.png";
 import image3 from "../../assets/support.png";
 import image4 from "../../assets/days-return.png";
 import image5 from "../../assets/original-products.png";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GroupWorkIcon from "@mui/icons-material/GroupWork";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -90,6 +94,59 @@ export default function Footer() {
           <Box className="flex flex-col justify-center items-center cursor-pointer">
             <img className="w-14" src={image5} alt="#" />
             <p>ﺿﻤﺎﻧﺖ اﺻﻞ ﺑﻮدن ﮐﺎﻟﺎ</p>
+          </Box>
+        </Box>
+        <Box className="mt-12">
+          <Box className="flex rtl justify-between px-6 text-navTextColor">
+            <Box>
+              <ul className="flex flex-col gap-4">
+                <li className="text-lg text-black">با دیجی‌کالا</li>
+                <li>اتاق خبر دیجی‌کالا</li>
+                <li>فروش در دیجی‌کالا</li>
+                <li>فرصت‌های شغلی</li>
+                <li>گزارش تخلف در دیجی‌کالا</li>
+                <li>تماس با دیجی‌کالا</li>
+                <li>درباره دیجی‌کالا</li>
+              </ul>
+            </Box>
+            <Box>
+              <ul className="flex flex-col gap-4">
+                <li className="text-lg text-black">خدمات مشتریان</li>
+                <li>پاسخ به پرسش‌های متداول</li>
+                <li>رویه‌های بازگرداندن کالا</li>
+                <li>شرایط استفاده</li>
+                <li>حریم خصوصی</li>
+                <li>گزارش باگ</li>
+              </ul>
+            </Box>
+            <Box>
+              <ul className="flex flex-col gap-4">
+                <li className="text-lg text-black">
+                  راهنمای خرید از دیجی‌کالا
+                </li>
+                <li>نحوه ثبت سفارش</li>
+                <li>رویه ارسال سفارش</li>
+                <li>شیوه‌های پرداخت</li>
+              </ul>
+            </Box>
+            <Box className="flex flex-col gap-4">
+              <p className="text-lg text-black">همراه ما باشید!</p>
+              <Box className="flex gap-8">
+                <InstagramIcon sx={{ fontSize: "35px", color: "#62666d" }} />
+                <TwitterIcon sx={{ fontSize: "35px", color: "#62666d" }} />
+                <LinkedInIcon sx={{ fontSize: "35px", color: "#62666d" }} />
+                <GroupWorkIcon sx={{ fontSize: "35px", color: "#62666d" }} />
+              </Box>
+              <p className="text-lg text-black mt-5">
+                با ثبت ایمیل، از جدید‌ترین تخفیف‌ها با‌خبر شوید
+              </p>
+              <Box>
+                <Box className="flex gap-2">
+                <input className="border py-2 px-8 rounded-lg " style={{background:'#F0F0F1'}} type="email" placeholder="ایمیل شما" name="" id="" />
+                <button className="border py-2 px-4 rounded-lg " style={{background:'#F0F0F1'}}>ثبت </button>
+                </Box>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>
