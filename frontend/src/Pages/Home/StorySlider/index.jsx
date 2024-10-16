@@ -43,7 +43,7 @@ export default function Home() {
               className="p-0.8 w-20 h-20 rounded-full "
             />
           </Box>
-          <Box className=" mt-2.5 text-center text-storyT text-sliderStoryTextColor">
+          <Box className=" mt-2.5 text-center text-xs lg:text-storyT text-sliderStoryTextColor">
             <p>{e?.attributes?.name}</p>
           </Box>
         </Box>
@@ -52,7 +52,7 @@ export default function Home() {
   });
   return (
     <>
-      <Box className="absolute flex justify-between px-24 w-full mt-17.5">
+      <Box className= " absolute hidden lg:flex justify-between px-24 w-full mt-17.5">
         <Box className=" bg-white ml-2 z-10 cursor-pointer nextStory flex justify-center border w-10 rounded-full h-10">
           <KeyboardArrowLeftIcon className="mt-1.5 text-slate-400 hover:text-slate-700" />
         </Box>
@@ -66,16 +66,22 @@ export default function Home() {
         //   padding: "0px 0px 0px 20px ",
           
         // }}
-        // slidesPerView={12.4}
+        slidesPerView={3.5}
         breakpoints={{
+          440: {
+            slidesPerView: 4.5,
+          },
+          540: {
+            slidesPerView: 5.5,
+          },
           640: {
-            slidesPerView: 8.5,
+            slidesPerView: 6.5,
           },
           768: {
-            slidesPerView: 8.5,
+            slidesPerView: 7.5,
           },
           1024: {
-            slidesPerView: 10.5,
+            slidesPerView: 8.5,
           },
           1280: {
             slidesPerView: 11.5,
