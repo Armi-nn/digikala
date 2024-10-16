@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import { FreeMode, Navigation } from "swiper/modules";
 import { Box } from "@mui/material";
 
-import './style.css'
+import "./style.css";
 export default function Home() {
   const [slideStory, setSlideStory] = useState();
   useEffect(() => {
@@ -24,7 +24,6 @@ export default function Home() {
         console.log(err);
       }
     })();
-    
   }, []);
   const item = slideStory?.map((e, index) => {
     return (
@@ -52,7 +51,7 @@ export default function Home() {
   });
   return (
     <>
-      <Box className= " absolute hidden lg:flex justify-between px-24 w-full mt-17.5">
+      <Box className=" absolute hidden lg:flex justify-between px-24 w-full mt-17.5">
         <Box className=" bg-white ml-2 z-10 cursor-pointer nextStory flex justify-center border w-10 rounded-full h-10">
           <KeyboardArrowLeftIcon className="mt-1.5 text-slate-400 hover:text-slate-700" />
         </Box>
@@ -61,11 +60,6 @@ export default function Home() {
         </Box>
       </Box>
       <Swiper
-        // style={{
-        //   margin: "16px 6vw 0px 6vw",
-        //   padding: "0px 0px 0px 20px ",
-          
-        // }}
         slidesPerView={3.5}
         breakpoints={{
           440: {
