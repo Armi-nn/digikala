@@ -163,7 +163,7 @@ export default function Navbar() {
           </Box>
         </Box>
       </Box>
-      <Box className="lg:hidden flex justify-between rtl fixed bottom-0 px-21 py-2 left-0 w-full z-50 text-xs border-t text-navTextColor">
+      <Box className="lg:hidden flex justify-between rtl fixed bottom-0 px-21 py-2 left-0 w-full z-50 text-xs border-t text-navTextColor bg-white ">
         {/* lg:hidden flex justify-between rtl fixed bottom-2 left-0 w-full z-50 shadow-lg -translate-y-1 */}
         <Box className="flex flex-col items-center ">
           <HomeIcon />
