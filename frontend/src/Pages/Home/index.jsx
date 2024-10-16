@@ -7,6 +7,7 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import image1 from "../../assets/ac127167132653d14c758748b07824a6.png";
 import image2 from "../../assets/987f905df337a78bad4da4d17b6eb20f.png";
 import image3 from "../../assets/3.png";
+
 import image4 from "../../assets/4.png";
 import image5 from "../../assets/5.png";
 import image6 from "../../assets/6.png";
