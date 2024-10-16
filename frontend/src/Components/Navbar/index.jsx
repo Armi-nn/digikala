@@ -58,14 +58,12 @@ export default function Navbar() {
       <Box
         ref={navbarRef}
         sx={{ zIndex: 9999 }}
-        className={`fixed w-full top-0 ${
-          isScrollingDown && "shadow-slate-300 shadow-bottom"
-        }`}
+        className={`fixed w-full top-0 shadow-slate-300 shadow-bottom lg:shadow-none `}
       >
         <Banner />
         <Box className="bg-white h-23 pt-3">
-          <Box className="flex justify-between pl-6">
-            <Box className="flex gap-3">
+          <Box className="flex justify-between pl-3 xl:pl-6 ">
+            <Box className="lg:flex hidden gap-3">
               <Link>
                 <Box className="mt-2 mr-2">
                   <ShoppingCartOutlinedIcon />
@@ -84,20 +82,20 @@ export default function Navbar() {
                 <Box className="relative">
                   <input
                     onFocus={handelFocus}
-                    className="focus:outline-none rounded-lg w-99 h-11 bg-inpSearch rtl relative pr-14 pb-2 text-black cursor-default"
+                    className="lg:w-99 w-100 lg:pr-14 pr-12 focus:outline-none lg:rounded-lg rounded-full   h-10 lg:h-11 bg-inpSearch rtl relative  pb-2 text-black cursor-default"
                     type="text"
                     placeholder="جستجو"
                   />
                   <SearchIcon
                     style={{ fontSize: "25px" }}
-                    className="absolute right-4 top-3 text-slate-400"
+                    className="absolute right-4 lg:top-3 top-2 text-slate-400"
                   />
                 </Box>
               </Box>
-              <Box>
+              <Box className="hidden lg:block">
                 <Link to={"/"}>
                   <img
-                    className="w-48 cursor-pointer mt-2 mr-6"
+                    className="w-48 cursor-pointer mt-2 mr-3 xl:mr-6"
                     src={Logo}
                     alt=""
                   />
@@ -113,12 +111,12 @@ export default function Navbar() {
           zIndex: 9998,
           position: "relative",
         }}
-        className={`bg-white shadow-slate-300 shadow-bottom w-full h-8.5 flex justify-between transition-transform duration-300 ${
+        className={`bg-white shadow-slate-300 shadow-bottom w-full h-8.5  justify-between transition-transform duration-300 hidden lg:flex ${
           isScrollingDown ? "-translate-y-full" : "translate-y-0"
         }`}
       >
         <Box>
-          <p className="text-navTextSize pl-4.5 cursor-pointer flex gap-1.5">
+          <p className="text-navTextSize pl-4.5 cursor-pointer hidden xl:flex gap-1.5">
             ارسال به تهران عباس آباد علاقبند
             <PlaceRoundedIcon sx={{ fontSize: "20px" }} className="mt-0.5" />
           </p>
@@ -127,7 +125,7 @@ export default function Navbar() {
           <ul className="flex text-navTextColor gap-4.5 mr-3 text-sm text-navTextSize mt-0.5">
             <li className="cursor-pointer">!در دیجی کالا بفروشید</li>
             <li className="cursor-pointer">سوالی دارید؟</li>
-            <li className="flex gap-1.5 cursor-pointer">
+            <li className=" gap-1.5 cursor-pointer hidden xl:flex">
               تخفیف ها و پیشنهادها
               <DiscountRoundedIcon sx={{ fontSize: "18px" }} className="mt-1" />
             </li>
