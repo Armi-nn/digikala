@@ -9,9 +9,9 @@ export default function App() {
     <>
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        {/* <Route exact path="/" element={<Home />} /> */}
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

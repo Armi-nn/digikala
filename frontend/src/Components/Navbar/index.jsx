@@ -13,6 +13,10 @@ import CardGiftcardOutlinedIcon from "@mui/icons-material/CardGiftcardOutlined";
 import WhatshotRoundedIcon from "@mui/icons-material/WhatshotRounded";
 import FlakyRoundedIcon from "@mui/icons-material/FlakyRounded";
 import PlaceRoundedIcon from "@mui/icons-material/PlaceRounded";
+import HomeIcon from "@mui/icons-material/Home";
+import CategoryIcon from "@mui/icons-material/Category";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
 export default function Navbar() {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -157,6 +161,29 @@ export default function Navbar() {
             <p>دسته بندی کالاها</p>
             <MenuRoundedIcon sx={{ fontSize: "18px" }} className="mt-1" />
           </Box>
+        </Box>
+      </Box>
+      <Box className="lg:hidden flex justify-between rtl fixed bottom-0 px-21 py-2 left-0 w-full z-50 text-xs border-t text-navTextColor">
+        {/* lg:hidden flex justify-between rtl fixed bottom-2 left-0 w-full z-50 shadow-lg -translate-y-1 */}
+        <Box className="flex flex-col items-center ">
+          <HomeIcon />
+          <p>خانه</p>
+        </Box>
+        <Box className="flex flex-col items-center">
+          <CategoryIcon />
+          <p>دسته بندی</p>
+        </Box>
+        <Box className="flex flex-col items-center">
+          <ShoppingCartOutlinedIcon />
+          <p>سبد خرید</p>
+        </Box>
+        <Box className="flex flex-col items-center">
+          <PlayArrowIcon />
+          <p>مگنت</p>
+        </Box>
+        <Box className="flex flex-col items-center">
+          <PersonOutlineIcon />
+          <p>دیجی کالای من</p>
         </Box>
       </Box>
     </>
