@@ -6,10 +6,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import { FreeMode, Navigation } from "swiper/modules";
 import { Box } from "@mui/material";
 
+import './style.css'
 export default function Home() {
   const [slideStory, setSlideStory] = useState();
   useEffect(() => {
@@ -24,6 +24,7 @@ export default function Home() {
         console.log(err);
       }
     })();
+    
   }, []);
   const item = slideStory?.map((e, index) => {
     return (
@@ -60,11 +61,26 @@ export default function Home() {
         </Box>
       </Box>
       <Swiper
-        style={{
-          margin: "16px 96px 0px 96px",
-          padding: "0px 0px 0px 20px ",
+        // style={{
+        //   margin: "16px 6vw 0px 6vw",
+        //   padding: "0px 0px 0px 20px ",
+          
+        // }}
+        // slidesPerView={12.4}
+        breakpoints={{
+          640: {
+            slidesPerView: 8.5,
+          },
+          768: {
+            slidesPerView: 8.5,
+          },
+          1024: {
+            slidesPerView: 10.5,
+          },
+          1280: {
+            slidesPerView: 11.5,
+          },
         }}
-        slidesPerView={12.4}
         spaceBetween={30}
         freeMode={true}
         pagination={{
@@ -75,7 +91,7 @@ export default function Home() {
           prevEl: ".prevStory",
         }}
         modules={[FreeMode, Navigation]}
-        className="mySwiper rtl"
+        className="mySwiper rtl responsive"
       >
         {item}
       </Swiper>
