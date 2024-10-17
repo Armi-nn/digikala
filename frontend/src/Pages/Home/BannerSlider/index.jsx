@@ -27,7 +27,8 @@ export default function BannerSlider() {
     return (
       <SwiperSlide className="cursor-pointer" key={index}>
         <img
-          style={{ height: "400px", objectFit: "cover" }}
+          // style={{ height: "400px", objectFit: "cover" }}
+          className="xl:h-95 lg:h-75 h-44 w-full object-cover rounded-2xl"
           src={
             process.env.REACT_APP_BASE_URL +
             e?.attributes?.image?.data?.attributes?.url
@@ -39,7 +40,7 @@ export default function BannerSlider() {
   });
   return (
     <>
-      <Box className="absolute flex w-full justify-end px-8 gap-2 mt-85">
+      <Box className=" absolute hidden xl:flex w-full justify-end px-8 gap-2 mt-85">
         <Box className=" bg-white z-10 cursor-pointer nextBanner flex justify-center border w-10 rounded-full h-10">
           <KeyboardArrowLeftIcon className="mt-1.5 text-slate-400 hover:text-slate-700" />
         </Box>
