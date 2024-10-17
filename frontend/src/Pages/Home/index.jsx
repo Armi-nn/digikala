@@ -103,7 +103,7 @@ export default function Home() {
         </Box>
       </Box>
 
-      <Box className="mt-11">
+      <Box className="mt-11 2xl:px-24 px-10">
         <ProductSlider />
       </Box>
 

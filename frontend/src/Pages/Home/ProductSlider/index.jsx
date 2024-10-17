@@ -92,7 +92,30 @@ export default function ProductSlider() {
   return (
     <>
       <Swiper
-        slidesPerView={8.2}
+        // slidesPerView={8.2}
+        breakpoints={{
+          375: {
+            slidesPerView: 5.2,
+          },
+          // 540: {
+          //   slidesPerView: 3.5,
+          // },
+          // 640: {
+          //   slidesPerView: 4.5,
+          // },
+          // 768: {
+          //   slidesPerView: 5.2,
+          // },
+          1100: {
+            slidesPerView: 6.2,
+          },
+          1280: {
+            slidesPerView: 7.2,
+          },
+          1510: {
+            slidesPerView: 8.2,
+          },
+        }}
         spaceBetween={0}
         freeMode={true}
         navigation={{
@@ -100,7 +123,7 @@ export default function ProductSlider() {
           prevEl: ".prevProduct",
         }}
         modules={[FreeMode, Navigation]}
-        className="mySwiper rtl bg-red-500 w-99.6 rounded-2xl h-73 "
+        className="mySwiper rtl bg-red-500 rounded-2xl h-73 "
       >
         <SwiperSlide className="">
           <Box className="pr-10 mt-4.5">
