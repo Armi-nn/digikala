@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import imageDiscount from "../../../assets/Amazing.png";
@@ -11,6 +11,8 @@ import "swiper/css/pagination";
 import { FreeMode, Navigation } from "swiper/modules";
 import { Box } from "@mui/material";
 import Timer from "./Timer";
+
+import "./style.css";
 
 export default function ProductSlider() {
   const [product, setProduct] = useState();
@@ -32,32 +34,32 @@ export default function ProductSlider() {
       index <= 10 && (
         <SwiperSlide key={index} className={`cursor-pointer py-5 flex`}>
           <Box
-            className={`bg-white cursor-pointer w-40 h-71 ${
+            className={`bg-white cursor-pointer lg:w-40 w-32 lg:h-71 h-56 mr-5 lg:mr-0 ${
               index === 0 ? "rounded-r-lg" : ""
             } mr-1 p-1 overflow-hidden`}
           >
-            <img
-              className="mt-0 object-contain mr-3"
-              style={{
-                width: "132px",
-                height: "158px",
-                marginTop: "-7px",
-              }}
-              src={
-                process.env.REACT_APP_BASE_URL +
-                e?.attributes?.iamge?.data[0]?.attributes?.url
-              }
-              alt="#"
-            />
+            <Box className="flex justify-center">
+              <img
+                className="mt-0 object-contain mr-3 lg:w-34 lg:h-40 w-25 h-32"
+                style={{
+                  marginTop: "-7px",
+                }}
+                src={
+                  process.env.REACT_APP_BASE_URL +
+                  e?.attributes?.iamge?.data[0]?.attributes?.url
+                }
+                alt="#"
+              />
+            </Box>
             <Box className="px-2 text-navTextSize">
-              <Box className=" text-navTextColor">
+              <Box className=" lg:text-navTextColor text-xs">
                 <p style={{ marginTop: "-4px" }}>
                   {e?.attributes?.name.length > 63
                     ? e?.attributes?.name.slice(0, 38) + "..."
                     : e?.attributes?.name}
                 </p>
               </Box>
-              <Box className="flex gap-4 mt-2 ">
+              <Box className="flex lg:gap-4 gap-1  mt-2 ">
                 <Box className="bg-red-600 w-8 rounded-full h-5 text-center flex justify-center items-center text-white mt-2">
                   <p
                     style={{
@@ -69,7 +71,7 @@ export default function ProductSlider() {
                 </Box>
                 <Box className="">
                   <Box className="flex items-center">
-                    <Box className="flex text-xsPlus text-TextColorPrice">
+                    <Box className="flex lg:text-xsPlus text-xs text-TextColorPrice">
                       <p>{e?.attributes?.discountedPrice}</p>
                     </Box>
                     <Box className="text-xs ">
@@ -77,7 +79,7 @@ export default function ProductSlider() {
                     </Box>
                   </Box>
                   <Box className="">
-                    <p className=" text-discountTextColor line-through ">
+                    <p className=" lg:text-discountTextColor text-xs line-through ">
                       {e?.attributes?.price}
                     </p>
                   </Box>
@@ -92,22 +94,24 @@ export default function ProductSlider() {
   return (
     <>
       <Swiper
-        // slidesPerView={8.2}
         breakpoints={{
-          375: {
-            slidesPerView: 5.2,
+          300: {
+            slidesPerView: 2.8,
           },
-          // 540: {
-          //   slidesPerView: 3.5,
-          // },
-          // 640: {
-          //   slidesPerView: 4.5,
-          // },
-          // 768: {
-          //   slidesPerView: 5.2,
-          // },
-          1100: {
-            slidesPerView: 6.2,
+          450: {
+            slidesPerView: 2.8,
+          },
+          500: {
+            slidesPerView: 3.8,
+          },
+          640: {
+            slidesPerView: 4.8,
+          },
+          850: {
+            slidesPerView: 6.5,
+          },
+          1024: {
+            slidesPerView: 5.8,
           },
           1280: {
             slidesPerView: 7.2,
@@ -123,10 +127,10 @@ export default function ProductSlider() {
           prevEl: ".prevProduct",
         }}
         modules={[FreeMode, Navigation]}
-        className="mySwiper rtl bg-red-500 rounded-2xl h-73 "
+        className="mySwiper rtl bg-red-500 lg:rounded-2xl lg:h-73 h-65 "
       >
-        <SwiperSlide className="">
-          <Box className="pr-10 mt-4.5">
+        <SwiperSlide className="siwperSlideProduct">
+          <Box className="pr-10 mt-4.5  ">
             <Box>
               <img className="w-24 h-24 mt-1" src={imageTitle} alt="#" />
             </Box>
@@ -147,6 +151,7 @@ export default function ProductSlider() {
             </Box>
           </Box>
         </SwiperSlide>
+
         <Box>{slideProduct}</Box>
         <SwiperSlide className="">
           <Box>
