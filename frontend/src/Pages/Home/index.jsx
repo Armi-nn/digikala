@@ -56,7 +56,7 @@ export default function Home() {
 
       <StorySlider />
 
-       <BannerSlider />
+      <BannerSlider />
 
       <Box className="flex flex-wrap rtl md:justify-between justify-center xl:px-32 lg:px-10 px-2 mt-6 text-navTextColor lg:text-navTextSize text-xs">
         <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
@@ -103,41 +103,51 @@ export default function Home() {
         </Box>
       </Box>
 
-      <Box className="mt-11 2xl:px-24 px-10">
+      <Box className="mt-11 2xl:px-24 lg:px-10 ">
         <ProductSlider />
       </Box>
 
       <Box className="mt-3.5 cursor-pointer flex justify-center">
-        <img className="h-26 w-99.7" src={imageMarket} alt="#" />
+        <img className="h-26 w-99.7 px-3 lg:px-0" src={imageMarket} alt="#" />
       </Box>
 
-      <Box className="flex ml-24 mt-3.5 gap-4 w-99.7">
-        <img
-          className="w-80 rounded-lg cursor-pointer"
-          title="پارتنرشیپ-سن ایچ"
-          src={div2image1}
-          alt=""
-        />
-        <img
-          className="w-80 rounded-lg cursor-pointer"
-          title="پارتنرشیپ-کفش شیما"
-          src={div2image2}
-          alt="#"
-        />
-        <img
-          className="w-80 rounded-lg cursor-pointer"
-          title="خودرو و موتور سیکلت"
-          src={div2image3}
-          alt="#"
-        />
-        <img
-          className="w-80 rounded-lg cursor-pointer"
-          title="طلا"
-          src={div2image4}
-          alt="#"
-        />
+      <Box className="flex  mt-3.5  justify-center px-3 lg:px-5">
+        <Box className="flex gap-4 flex-wrap justify-center">
+          <Box>
+            <img
+              className="lg:w-80 w-81 rounded-lg cursor-pointer"
+              title="پارتنرشیپ-سن ایچ"
+              src={div2image1}
+              alt=""
+            />
+          </Box>
+          <Box>
+            <img
+              className="lg:w-80 w-81 rounded-lg cursor-pointer"
+              title="پارتنرشیپ-کفش شیما"
+              src={div2image2}
+              alt="#"
+            />
+          </Box>
+          <Box>
+            <img
+              className="lg:w-80 w-81 rounded-lg cursor-pointer"
+              title="خودرو و موتور سیکلت"
+              src={div2image3}
+              alt="#"
+            />
+          </Box>
+          <Box>
+            <img
+              className="lg:w-80 w-81 rounded-lg cursor-pointer"
+              title="طلا"
+              src={div2image4}
+              alt="#"
+            />
+          </Box>
+        </Box>
       </Box>
-
+      
       <Category />
 
       <Box className="flex justify-center gap-4 mt-28">

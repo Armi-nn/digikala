@@ -27,8 +27,7 @@ export default function BannerSlider() {
     return (
       <SwiperSlide className="cursor-pointer" key={index}>
         <img
-          // style={{ height: "400px", objectFit: "cover" }}
-          className="xl:h-95 lg:h-75 h-44 w-full object-cover rounded-2xl"
+          className="xl:h-95 lg:h-75 h-44 w-full object-cover lg:rounded-none rounded-2xl"
           src={
             process.env.REACT_APP_BASE_URL +
             e?.attributes?.image?.data?.attributes?.url
