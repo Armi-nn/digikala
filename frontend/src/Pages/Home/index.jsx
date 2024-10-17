@@ -36,7 +36,7 @@ import Readings from "./Readings";
 export default function Home() {
   return (
     <>
-      <Box>
+      <Box className="xl:block hidden">
         <Box className="flex justify-end items-start pr-10">
           <Box
             sx={{ marginTop: "490px" }}
@@ -56,46 +56,46 @@ export default function Home() {
 
       <StorySlider />
 
-      <BannerSlider />
+       <BannerSlider />
 
-      <Box className="flex rtl justify-between px-32 mt-6 text-navTextColor">
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1">
+      <Box className="flex flex-wrap rtl md:justify-between justify-center xl:px-32 lg:px-10 px-2 mt-6 text-navTextColor lg:text-navTextSize text-xs">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
           <img src={image1} alt="#" />
           <p>دریافت وام</p>
         </Box>
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
           <img src={image2} alt="#" />
           <p>بازگشت به مدرسه</p>
         </Box>
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
           <img src={image3} alt="#" />
           <p>بهداشتی مراقبتی</p>
         </Box>
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
           <img src={image4} alt="#" />
           <p>انبار‌تکانی پوشاک</p>
         </Box>
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
           <img src={image5} alt="#" />
           <p>پرفروش‌های لوازم‌تحریر</p>
         </Box>
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
           <img src={image6} alt="#" />
           <p>تبلت خوش‌قیمت</p>
         </Box>
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
           <img src={image7} alt="#" />
           <p>دیجی‌کالا مهر</p>
         </Box>
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1">
           <img src={image8} alt="#" />
           <p>جایزه خرید اول</p>
         </Box>
-        <Box className="cursor-pointer rounded-full w-12.5 text-navTextSize text-center flex flex-col gap-1">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 rounded-full text-center flex flex-col gap-1">
           <img src={image9} alt="#" />
           <p>لوازم دانشجویی</p>
         </Box>
-        <Box className="cursor-pointer w-12.5 text-navTextSize text-center flex flex-col gap-1 ">
+        <Box className="mx-3 cursor-pointer lg:w-12.5 w-10 text-center flex flex-col gap-1 ">
           <Box className="bg-slate-100 text-slate-400 rounded-full w-12.5 h-12.5 flex justify-center ">
             <MoreHorizIcon sx={{ fontSize: "30px" }} className="mt-2.5" />
           </Box>
@@ -220,7 +220,7 @@ export default function Home() {
 
       <Box className="mt-7">
         <Readings />
-      </Box>
+      </Box> 
     </>
   );
 }
