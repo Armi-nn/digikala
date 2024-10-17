@@ -4,7 +4,7 @@ import React from "react";
 export default function Banner() {
   return (
     <>
-      <Box className="cursor-pointer">
+      <Box className="hidden lg:block cursor-pointer">
         <img
           className="z-50 h-17 w-screen"
           src="
