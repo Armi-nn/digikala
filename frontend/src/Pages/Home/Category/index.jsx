@@ -21,7 +21,7 @@ export default function Category() {
       <Box
         key={index}
         className="flex cursor-pointer items-center flex-col h-28 gap-3 lg:text-navTextSize text-xs lg:w-25 w-18 text-center"
-       >
+      >
         <img
           className="lg:w-24 w-18 "
           src={
