@@ -147,17 +147,17 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
-      
+
       <Category />
 
-      <Box className="flex justify-center gap-4 mt-28">
+      <Box className="flex justify-center gap-4 lg:mt-28 mt-10 flex-wrap px-3">
         <img
-          className="w-99.1 cursor-pointer rounded-2xl"
+          className="lg:w-99.1 w-99.2 cursor-pointer rounded-2xl"
           src={shoes}
           alt="#"
         />
         <img
-          className="w-99.1 cursor-pointer rounded-2xl"
+          className="lg:w-99.1 w-99.2 cursor-pointer rounded-2xl"
           src={shoes2}
           alt="#"
         />
@@ -167,19 +167,19 @@ export default function Home() {
         <BrandSlider />
       </Box>
 
-      <Box className="flex justify-center gap-4 mt-4">
+      <Box className="flex justify-center gap-4 lg:mt-4 mt-2 flex-wrap px-3">
         <img
-          className="w-99.1 cursor-pointer rounded-2xl"
+          className="lg:w-99.1 w-99.2 cursor-pointer rounded-2xl"
           src="https://dkstatics-public.digikala.com/digikala-adservice-banners/6fc8e2d21aba219e1aa2cc93cb4a5fd66a16caac_1726292708.gif?x-oss-process=image"
           alt="#"
         />
         <img
-          className="w-99.1 cursor-pointer rounded-2xl"
+          className="lg:w-99.1 w-99.2 cursor-pointer rounded-2xl"
           src={imageSpice}
           alt="#"
         />
       </Box>
-
+     
       <Box className="flex justify-center">
         <Box className="flex border rounded-2xl mt-4 w-99.6 rtl">
           <ProductCategory nameProps={"کیف و کاور گوشی"} />
@@ -230,7 +230,7 @@ export default function Home() {
 
       <Box className="mt-7">
         <Readings />
-      </Box> 
+      </Box>  
     </>
   );
 }
