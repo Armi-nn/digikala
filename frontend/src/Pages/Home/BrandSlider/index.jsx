@@ -55,7 +55,7 @@ export default function BrandSlider() {
             />
           </Box>
         </Box>
-        <Box className="absolute flex w-full justify-end px-24.5 gap-99.5 mt-28 ">
+        <Box className="xl:flex hidden absolute w-full justify-end px-24.5 gap-99.5 mt-28 ">
           <Box className=" bg-white z-10 cursor-pointer nextBrand flex justify-center border w-10 rounded-full h-10">
             <KeyboardArrowLeftIcon className="mt-1.5 text-slate-400 hover:text-slate-700" />
           </Box>
@@ -64,14 +64,40 @@ export default function BrandSlider() {
           </Box>
         </Box>
         <Swiper
-          slidesPerView={9.5}
+          // slidesPerView={9.5}
+          breakpoints={{
+            300: {
+              slidesPerView: 3.5,
+            },
+            450: {
+              slidesPerView: 4.8,
+            },
+            500: {
+              slidesPerView: 5.8,
+            },
+            640: {
+              slidesPerView: 6.8,
+            },
+            850: {
+              slidesPerView: 7.5,
+            },
+            1024: {
+              slidesPerView: 8.8,
+            },
+            // 1280: {
+            //   slidesPerView: 7.2,
+            // },
+            // 1510: {
+            //   slidesPerView: 8.2,
+            // },
+          }}
           freeMode={true}
           navigation={{
             nextEl: ".nextBrand",
             prevEl: ".prevBrand",
           }}
           modules={[FreeMode, Navigation]}
-          className="mySwiper rtl border  relative rounded-2xl w-99.6"
+          className="mySwiper rtl lg:border  relative rounded-2xl lg:w-99.6"
         >
           <Box>{item}</Box>
         </Swiper>
