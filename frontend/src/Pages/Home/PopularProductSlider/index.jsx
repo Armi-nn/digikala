@@ -55,7 +55,7 @@ export default function PopularProductSlider({ url, title }) {
               <p
                 className={`${
                   idx === 2 ? "" : "border-b"
-                }  py-10 text-navTextSize h-25 `}
+                }  py-10 lg:text-navTextSize text-xs h-25 `}
               >
                 {e?.attributes?.name.length > 50
                   ? e?.attributes?.name.slice(0, 50) + "..."
@@ -71,7 +71,7 @@ export default function PopularProductSlider({ url, title }) {
   return (
     <>
       <Box className="relative w-full ">
-        <Box className="flex justify-center">
+        <Box className="flex justify-end pr-5 lg:pr-0 lg:justify-center">
           <Box className="absolute pt-9 text-xl flex items-center gap-1">
             <p className="text-center" style={{ fontSize: "24px" }}>
               {title}
@@ -84,7 +84,7 @@ export default function PopularProductSlider({ url, title }) {
             />
           </Box>
         </Box>
-        <Box className="absolute flex w-full justify-end px-24.5 gap-99.5 mt-71  ">
+        <Box className="absolute 2xl:flex hidden w-full justify-end px-24.5 gap-99.5 mt-71  ">
           <Box className="bg-white z-10 cursor-pointer nextPopularProduct flex justify-center border w-10 rounded-full h-10">
             <KeyboardArrowLeftIcon className="mt-1.5 text-slate-400 hover:text-slate-700" />
           </Box>
@@ -93,15 +93,33 @@ export default function PopularProductSlider({ url, title }) {
           </Box>
         </Box>
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
+          breakpoints={{
+            300: {
+              slidesPerView: 1.2,
+            },
+            460: {
+              slidesPerView: 1.5,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2.5,
+            },
+            1024: {
+              slidesPerView: 2.8,
+            },
+            1280: {
+              slidesPerView: 3.8,
+            },
+          }}
           freeMode={true}
           navigation={{
             nextEl: ".nextPopularProduct",
             prevEl: ".prevPopularProduct",
           }}
           modules={[FreeMode, Navigation]}
-          className="mySwiper rtl border relative rounded-2xl w-99.6 mt-3.5 "
+          className="mySwiper rtl lg:border relative rounded-2xl lg:w-99.6 mt-3.5 "
         >
           {slides}
         </Swiper>

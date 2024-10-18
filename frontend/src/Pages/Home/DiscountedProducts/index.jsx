@@ -21,7 +21,7 @@ export default function DiscountedProducts() {
   const item = product?.map((e, index) => {
     return (
       <Link>
-        <Box className="w-52" key={index}>
+        <Box className="w-44 md:w-52" key={index}>
           <Box
             className={`${
               index === 5 || index === 11 || index === 17 ? "" : "border-l "
@@ -64,9 +64,9 @@ export default function DiscountedProducts() {
   });
   return (
     <>
-      <Box className="flex w-99.6 justify-center relative ">
+      <Box className="flex lg:w-99.6 justify-center relative ">
         <Box className="mt-22 flex flex-wrap justify-center">{item}</Box>
-        <Box className="absolute  text-xl flex items-center gap-1 ">
+        <Box className="absolute text-xl flex items-center gap-1 ">
           <LocalOfferIcon
             sx={{
               fontSize: "25px",

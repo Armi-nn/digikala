@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-export default function Readings() {
+export default function   Readings() {
   const [product, setProduct] = useState();
   useEffect(() => {
     (async () => {
@@ -21,7 +21,7 @@ export default function Readings() {
     return (
       <Box
         key={index}
-        className="border rounded-lg overflow-hidden cursor-pointer"
+        className="border w-99.6 rounded-lg overflow-hidden cursor-pointer"
       >
         <img
           src={
@@ -40,8 +40,8 @@ export default function Readings() {
   });
   return (
     <>
-      <Box className="flex flex-col gap-6">
-        <Box className="flex justify-between px-28 items-center ">
+      <Box className="flex  flex-col gap-6">
+        <Box className="flex justify-between md:px-28 px-16 items-center ">
           <Box className="text-textButton flex items-center gap-1">
             <Box>
               <ArrowBackIosNewIcon
@@ -54,7 +54,7 @@ export default function Readings() {
           </Box>
           <p className="text-lg ">خواندنی‌ها</p>
         </Box>
-        <Box className=" flex rtl px-24 gap-3">{items}</Box>
+        <Box className=" flex flex-wrap lg:flex-nowrap rtl justify-center  lg:px-24 gap-3">{items}</Box>
       </Box>
     </>
   );
