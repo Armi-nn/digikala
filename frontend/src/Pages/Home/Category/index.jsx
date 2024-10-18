@@ -41,7 +41,7 @@ export default function Category() {
       </Box>
       <Box className="flex rtl w-full justify-center items-center lg:gap-10 gap-3 flex-wrap xl:px-36 px-3 mt-11">
         {item}
-      </Box>
+      </Box>  
     </>
   );
 }
