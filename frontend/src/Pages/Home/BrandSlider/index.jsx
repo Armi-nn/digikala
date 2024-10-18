@@ -84,12 +84,6 @@ export default function BrandSlider() {
             1024: {
               slidesPerView: 8.8,
             },
-            // 1280: {
-            //   slidesPerView: 7.2,
-            // },
-            // 1510: {
-            //   slidesPerView: 8.2,
-            // },
           }}
           freeMode={true}
           navigation={{
