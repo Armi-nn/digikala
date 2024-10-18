@@ -25,27 +25,25 @@ export default function ProductCategory({ nameProps }) {
       return e?.attributes?.products?.data.slice(0, 4).map((product, index) =>
         product?.attributes?.iamge?.data.map((image) => (
           <Box
-            className="w-32"
+            className="lg:w-33  "
             key={image.id}
             sx={{
               display: "flex",
             }}
           >
             <Link>
-              <img
-                className={`  ${
-                  index === 1 && "border-r "
-                } p-2 pb-3 w-52 h-40  ${index === 3 && "border-r border-t"} ${
-                  index === 2 && "border-t "
-                }`}
-                style={{
-                  // width: "100px",
-                  objectFit: "cover",
-                }}
-                key={image.id}
-                src={process.env.REACT_APP_BASE_URL + image.attributes.url}
-                alt={product.attributes.name}
-              />
+              <Box className="w-full    ">
+                <img
+                  className={`  ${
+                    index === 1 && "border-r "
+                  } p-2 pb-3 lg:w-52 lg:h-40 w-40 object-contain lg:object-cover ${
+                    index === 3 && "border-r border-t"
+                  } ${index === 2 && "border-t "}`}
+                  key={image.id}
+                  src={process.env.REACT_APP_BASE_URL + image.attributes.url}
+                  alt={product.attributes.name}
+                />
+              </Box>
             </Link>
           </Box>
         ))
@@ -54,12 +52,12 @@ export default function ProductCategory({ nameProps }) {
   });
   return (
     <>
-      <Box className=" rtl w-85 border-r  ">
+      <Box className=" rtl w-85 lg:border-r  ">
         <Box className="pr-4.5 pt-2 ">
           <p className="text-xl">{nameProps}</p>
           <p className="text-storyT  text-neutral-500">بر اساس سلیقه شما</p>
         </Box>
-        <Box className="flex flex-wrap pr-10 ">{item}</Box>
+        <Box className="flex flex-wrap xl:pr-10 lg:pr-3 ">{item}</Box>
         <Link>
           <Box className="flex justify-center text-textButton">
             <Box className="flex items-center text-navTextSize pb-3">

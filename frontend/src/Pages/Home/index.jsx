@@ -181,7 +181,7 @@ export default function Home() {
       </Box>
       
       <Box className="flex justify-center">
-        <Box className="flex border rounded-2xl mt-4 w-99.6 rtl">
+        <Box className="flex flex-wrap justify-center lg:justify-start lg:flex-nowrap  lg:border lg:rounded-2xl mt-4 lg:w-99.6 rtl">
           <ProductCategory nameProps={"کیف و کاور گوشی"} />
           <ProductCategory nameProps={"گوشی موبایل"} />
           <ProductCategory nameProps={"هدفون، هدست و هندزفری"} />
@@ -230,7 +230,7 @@ export default function Home() {
 
       <Box className="mt-7">
         <Readings />
-      </Box> 
+      </Box>  
     </>
   );
 }
