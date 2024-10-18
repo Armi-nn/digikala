@@ -163,7 +163,7 @@ export default function Home() {
         />
       </Box>
 
-      <Box className="mt-4">
+      <Box className="lg:mt-4">
         <BrandSlider />
       </Box>
 
@@ -179,7 +179,7 @@ export default function Home() {
           alt="#"
         />
       </Box>
-     
+      
       <Box className="flex justify-center">
         <Box className="flex border rounded-2xl mt-4 w-99.6 rtl">
           <ProductCategory nameProps={"کیف و کاور گوشی"} />
@@ -230,7 +230,7 @@ export default function Home() {
 
       <Box className="mt-7">
         <Readings />
-      </Box>  
+      </Box> 
     </>
   );
 }
