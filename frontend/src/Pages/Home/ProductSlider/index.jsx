@@ -34,7 +34,7 @@ export default function ProductSlider() {
       index <= 10 && (
         <SwiperSlide key={index} className={`cursor-pointer py-5 flex`}>
           <Box
-            className={`bg-white cursor-pointer lg:w-40 w-32 lg:h-71 h-56 mr-5 lg:mr-0 ${
+            className={`bg-white cursor-pointer lg:w-40 w-32 h-56 lg:h-71 mr-5 lg:mr-0 ${
               index === 0 ? "rounded-r-lg" : ""
             } mr-1 p-1 overflow-hidden`}
           >
@@ -155,7 +155,7 @@ export default function ProductSlider() {
         <Box>{slideProduct}</Box>
         <SwiperSlide className="">
           <Box>
-            <Box className=" bg-white cursor-pointer border-2 w-40 h-71 rounded-l-lg mr-1 mt-5 flex  flex-col items-center gap-3">
+            <Box className=" bg-white cursor-pointer border-2 mr-5 lg:mr-1 lg:w-40 w-32 h-56 lg:h-71 rounded-l-lg  mt-5 flex  flex-col items-center gap-3">
               <Box
                 className=" border-blue-400 border-2 rounded-full h-13 w-13 mt-20 flex justify-center items-center text-blue-400
               "
