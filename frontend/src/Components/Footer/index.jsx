@@ -19,7 +19,11 @@ import digikalaBrand from "../../assets/digikalaBrand.png";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
       setIsVisible(true);
@@ -44,7 +48,7 @@ export default function Footer() {
 
   return (
     <>
-      <Box className="border-t mt-12 mb-40  ">
+      <Box className="border-t mt-12 mb-32  ">
         <Box className="flex justify-between pt-8">
           <Box>
             {isVisible && (
@@ -102,8 +106,8 @@ export default function Footer() {
           </Box>
         </Box>
         <Box className="mt-12">
-          <Box className="flex rtl justify-between px-6 text-navTextColor">
-            <Box>
+          <Box className="flex flex-col lg:flex-row rtl justify-between px-6 text-navTextColor">
+            <Box className="lg:block hidden">
               <ul className="flex flex-col gap-4">
                 <li className="text-lg text-black">با دیجی‌کالا</li>
                 <li className="cursor-pointer">اتاق خبر دیجی‌کالا</li>
@@ -114,7 +118,26 @@ export default function Footer() {
                 <li className="cursor-pointer">درباره دیجی‌کالا</li>
               </ul>
             </Box>
-            <Box>
+            <Box className="block lg:hidden border-t border-b py-3">
+              <ul className="lg:hidden flex flex-col gap-4">
+                <li className="text-lg text-black">
+                  <details>
+                    <summary className="cursor-pointer">با دیجی‌کالا</summary>
+                    <ul className="flex flex-col gap-4 mt-2">
+                      <li className="cursor-pointer">اتاق خبر دیجی‌کالا</li>
+                      <li className="cursor-pointer">فروش در دیجی‌کالا</li>
+                      <li className="cursor-pointer">فرصت‌های شغلی</li>
+                      <li className="cursor-pointer">
+                        گزارش تخلف در دیجی‌کالا
+                      </li>
+                      <li className="cursor-pointer">تماس با دیجی‌کالا</li>
+                      <li className="cursor-pointer">درباره دیجی‌کالا</li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </Box>
+            <Box className="lg:block hidden">
               <ul className="flex flex-col gap-4">
                 <li className="text-lg text-black">خدمات مشتریان</li>
                 <li className="cursor-pointer">پاسخ به پرسش‌های متداول</li>
@@ -124,7 +147,27 @@ export default function Footer() {
                 <li className="cursor-pointer">گزارش باگ</li>
               </ul>
             </Box>
-            <Box>
+            <Box className="lg:hidden block border-b py-3" >
+              <ul className=" flex flex-col gap-4">
+                <li className="text-lg text-black">
+                  <details>
+                    <summary className="cursor-pointer">خدمات مشتریان</summary>
+                    <ul className="flex flex-col gap-4">
+                      <li className="cursor-pointer">
+                        پاسخ به پرسش‌های متداول
+                      </li>
+                      <li className="cursor-pointer">
+                        رویه‌های بازگرداندن کالا
+                      </li>
+                      <li className="cursor-pointer">شرایط استفاده</li>
+                      <li className="cursor-pointer">حریم خصوصی</li>
+                      <li className="cursor-pointer">گزارش باگ</li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </Box>
+            <Box className="lg:block hidden">
               <ul className="flex flex-col gap-4">
                 <li className="text-lg text-black">
                   راهنمای خرید از دیجی‌کالا
@@ -134,7 +177,30 @@ export default function Footer() {
                 <li className="cursor-pointer">شیوه‌های پرداخت</li>
               </ul>
             </Box>
-            <Box className="hidden lg:flex flex-col gap-4 " >
+            <Box className="lg:hidden block border-b py-3">
+              <ul className=" flex flex-col gap-4">
+                <li className="text-lg text-black">
+                  <details>
+                    <summary className="cursor-pointer">
+                      {" "}
+                      راهنمای خرید از دیجی‌کالا
+                    </summary>
+                    <ul className="flex flex-col gap-4">
+                      <li className="cursor-pointer">
+                        پاسخ به پرسش‌های متداول
+                      </li>
+                      <li className="cursor-pointer">
+                        رویه‌های بازگرداندن کالا
+                      </li>
+                      <li className="cursor-pointer">شرایط استفاده</li>
+                      <li className="cursor-pointer">حریم خصوصی</li>
+                      <li className="cursor-pointer">گزارش باگ</li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </Box>
+            <Box className="hidden lg:flex flex-col gap-4 ">
               <p className="text-lg text-black">همراه ما باشید!</p>
               <Box className="flex gap-8">
                 <InstagramIcon sx={{ fontSize: "35px", color: "#62666d" }} />
@@ -169,7 +235,7 @@ export default function Footer() {
         <Box className="hidden lg:flex justify-center mt-11">
           <img style={{ width: "97vw" }} src={digikalaApp} alt="#" />
         </Box>
-        <Box className="border-t border-b mt-5 rtl flex justify-between mx-5 pb-10">
+        <Box className="lg:border-t lg:border-b mt-5 rtl flex justify-between mx-5 pb-10">
           <Box className="text-navTextColor text-navTextSize flex flex-col justify-center">
             <p className="text-2xl ">
               فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلای
