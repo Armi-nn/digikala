@@ -64,7 +64,7 @@ export default function Footer() {
               </button>
             )}
           </Box>
-          <Box className="flex flex-col gap-4">
+          <Box className="hidden lg:flex flex-col gap-4">
             <Box className="flex justify-end">
               <img
                 className="w-48 cursor-pointer mt-2 mr-6"
@@ -79,7 +79,7 @@ export default function Footer() {
             </Box>
           </Box>
         </Box>
-        <Box className="flex rtl justify-center gap-42 text-navTextSize text-navTextColor mt-12">
+        <Box className="hidden lg:flex rtl justify-center gap-42 text-navTextSize text-navTextColor mt-12">
           <Box className="flex flex-col justify-center  items-center cursor-pointer">
             <img className="w-14" src={image1} alt="#" />
             <p>اﻣﮑﺎن ﺗﺤﻮﯾﻞ اﮐﺴﭙﺮس</p>
