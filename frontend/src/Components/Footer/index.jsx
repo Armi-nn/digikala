@@ -44,7 +44,7 @@ export default function Footer() {
 
   return (
     <>
-      <Box className="border-t mt-12">
+      <Box className="border-t mt-12 mb-40  ">
         <Box className="flex justify-between pt-8">
           <Box>
             {isVisible && (
@@ -134,7 +134,7 @@ export default function Footer() {
                 <li className="cursor-pointer">شیوه‌های پرداخت</li>
               </ul>
             </Box>
-            <Box className="flex flex-col gap-4">
+            <Box className="hidden lg:flex flex-col gap-4 " >
               <p className="text-lg text-black">همراه ما باشید!</p>
               <Box className="flex gap-8">
                 <InstagramIcon sx={{ fontSize: "35px", color: "#62666d" }} />
@@ -166,7 +166,7 @@ export default function Footer() {
             </Box>
           </Box>
         </Box>
-        <Box className="flex justify-center mt-11">
+        <Box className="hidden lg:flex justify-center mt-11">
           <img style={{ width: "97vw" }} src={digikalaApp} alt="#" />
         </Box>
         <Box className="border-t border-b mt-5 rtl flex justify-between mx-5 pb-10">
@@ -190,7 +190,7 @@ export default function Footer() {
               کالا،‌ مقصد کالا
             </p>
           </Box>
-          <Box className="flex gap-2">
+          <Box className="hidden lg:flex gap-2">
             <Box className="border rounded-lg p-3.5  flex justify-center mt-5">
               <img src={rezi} className="w-20 object-contain " alt="#" />
             </Box>
@@ -202,14 +202,14 @@ export default function Footer() {
             </Box>
           </Box>
         </Box>
-        <Box className="text-navTextColor text-navTextSize flex justify-center items-center h-22">
+        <Box className="hidden lg:flex text-navTextColor text-navTextSize justify-center items-center h-22">
           <p>
             برای استفاده از مطالب دیجی‌کالا، داشتن «هدف غیرتجاری» و ذکر «منبع»
             کافیست. تمام حقوق اين وب‌سايت نیز برای شرکت نوآوران فن آوازه
             (فروشگاه آنلاین دیجی‌کالا) است.
           </p>
         </Box>
-        <Box>
+        <Box className="hidden lg:block">
           <img
             style={{ width: "100%", height: "100%" }}
             src={digikalaBrand}
