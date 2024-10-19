@@ -48,7 +48,7 @@ export default function Footer() {
 
   return (
     <>
-      <Box className="border-t mt-12 mb-32  ">
+      <Box className="border-t mt-12 mb-32 lg:mb-36 ">
         <Box className="flex justify-between pt-8">
           <Box>
             {isVisible && (
